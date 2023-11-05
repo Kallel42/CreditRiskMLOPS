@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/custom.css">
+    <script src="https://kit.fontawesome.com/9290f34d2c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="laptop">
+<header>
+    <h1 id="txt"></h1>
+</header>
+<div class="content">
+  <div class="frame">
+    <iframe title="Report Section" src="https://app.powerbi.com/view?r=eyJrIjoiZTEzNjNkNGEtZTc4Mi00ZjY2LTljNjktNjYwYzgwZDA3OGVkIiwidCI6ImRiZDY2NjRkLTRlYjktNDZlYi05OWQ4LTVjNDNiYTE1M2M2MSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+  </div>
+  <div class="formI">
+    <form action="" method="get" class="form">
+      <h1>Risk prediction</h1>
+      <div class="separation"></div>
+      <div>
+        <label for="income">Monthly Income: <br> (10000-1000000 INR) </label>
+        <input type="number" name="income" id="income" required>
+        <div id="addIncome"></div>
+      </div>
+      <div>
+        <label for="age">Age: </label>
+        <input type="number" name="age" id="age" required>
+      </div>
+      <div>
+        <label for="experience">Experience: </label>
+        <input type="number" name="experience" id="experience" required>
+      </div>
+      <div>
+        <label for="MS">Marital status: </label>
+        <div>
+        <input type="radio" name="M" id="M" value="married" required>
+        <label for="M">married</label>
+        <input type="radio" name="M" id="S" value="single" required>
+        <label for="S">Single</label>
+        </div>
+      </div>
+      <div>
+        <label for="name">House ownership: </label>
+      <div>
+        <input type="radio" name="HO" id="R" value="rented" required>
+        <label for="R">rented</label>
+        <input type="radio" name="HO" id="O" value="owned" required>
+        <label for="O">owned</label>
+        <input type="radio" name="HO" id="No" value="norent_noown" required>
+        <label for="No">no rent ,no own</label>
+        </div>
+      </div>
+      <div>
+        <label for="name">Car ownership : </label>
+      <div>
+        <input type="radio" name="co" id="Y" value="yes" required>
+        <label for="Y">Yes</label>
+        <input type="radio" name="co" id="no" value="no" required>
+        <label for="no">No</label>
+        </div>
+      </div>
+      <div>
+        <label for="name">State : </label>
+        <input id="statesId" list="states" required>
+        <datalist id="states">
+          <option value="West_Bengal">West_Bengal</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Uttar_Pradesh">Uttar_Pradesh</option>
+          <option value="Andhra_Pradesh">Andhra_Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tamil_Nadu">Tamil_Nadu</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="Assam">Assam</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Madhya_Pradesh">Madhya_Pradesh</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Puducherry">Puducherry</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Himachal_Pradesh">Himachal_Pradesh</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Jammu_and_Kashmir">Jammu_and_Kashmir</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Sikkim">Sikkim</option>
+        </datalist>
+      </div>
+      <div>
+        <label for="current_job_years">Current job years: </label>
+        <input type="number" name="current_job_years" id="current_job_years" required>
+      </div>
+      <div>
+        <input id="Sub" type="submit" value="Submit!">
+        <div class="loader"></div>
+        <div id="risk_1"><i class="fa-regular fa-circle-xmark"></i><h2>Sorry<br>We can't grant you credit<br>Please contact us for further details</h2></div>
+        <div id="risk_0"><i class="fa-regular fa-circle-check"></i><h2>We can grant you credit at any time<br>
+          you can see the locations of our agencies on the report map</h2></div>
+        
+      </div>
+
+    </form>
+  </div>
+</div>
+<footer>
+  <h2>Provided by Kallel Med anis</h2>
+  <h3><i class="fa-sharp fa-solid fa-envelope"></i><a href="kallel.medanis@gmail.com"> kallel.medanis@gmail.com</a> </h3>
+  <h3><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/med-anis-kalle"> https://www.linkedin.com/in/med-anis-kalle</a> </h3>
+  <h3><i class="fa-brands fa-kaggle"></i><a href="https://www.kaggle.com/kallelmedanis"> https://www.kaggle.com/kallelmedanis</a></h3>
+</footer>
+</div>
+<div class="mobile">
+  <div>This application is available only on Desktop</div>
+</div>  
+<script src="../static/js/script.js"></script>
+</body>
+
+</html>
