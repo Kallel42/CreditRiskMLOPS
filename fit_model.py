@@ -3,6 +3,16 @@ import pickle
 import datetime as dt
 import mlflow
 from sklearn.metrics import precision_recall_fscore_support as score
+import os
+
+
+os.environ['MLFLOW_TRACKING_USERNAME']= "kallel.medanis"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "4d6fd1f20698281fab0a86cd6f176e0458a6a720"
+
+
+mlflow.set_tracking_uri('https://dagshub.com/kallel.medanis/CreditRiskMLOPS.mlflow')
+
+
 
 def fit_model(X_train,X_test,y_train,y_test,model_name,model):
     with mlflow.start_run(run_name=model_name):

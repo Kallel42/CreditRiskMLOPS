@@ -18,6 +18,16 @@ from fit_model import fit_model
 from clean_data import clean_data
 app = Flask(__name__)
 
+
+os.environ['MLFLOW_TRACKING_USERNAME']= "kallel.medanis"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "4d6fd1f20698281fab0a86cd6f176e0458a6a720"
+
+
+mlflow.set_tracking_uri('https://dagshub.com/kallel.medanis/CreditRiskMLOPS.mlflow')
+
+#let's call the model from the model registry ( in production stage)
+
+
 models = {
     "RandomForest": RandomForestClassifier(),
     "LogisticRegression": LogisticRegression(),
