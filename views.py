@@ -29,10 +29,8 @@ mlflow.set_tracking_uri('https://dagshub.com/kallel.medanis/CreditRiskMLOPS.mlfl
 
 
 models = {
-    "RandomForest": RandomForestClassifier(),
-    "LogisticRegression": LogisticRegression(),
-    "SVM": SVC(),
     "DecisionTree": DecisionTreeClassifier(),
+    "LogisticRegression": LogisticRegression(),
     "GaussianNB": GaussianNB(),
     "KNeighbors": KNeighborsClassifier()
 }
@@ -56,7 +54,6 @@ def testfn():
         for model_name, model in models.items():
             fit_model(X_train,X_test,y_train,y_test,model_name,model)
         
-        #let's call the model from the model registry ( in production stage)
 
         df_mlflow = mlflow.search_runs(filter_string="metrics.F1_score_test<1")
         run_id = df_mlflow.loc[df_mlflow['metrics.F1_score_test'].idxmax()]['run_id']
@@ -71,9 +68,9 @@ def testfn():
 
         df=pd.read_csv('Df.csv')
 
-        df=df.append(new_row, ignore_index=True)
+        df = pd.concat([df, new_row], ignore_index=True)
 
-        df.to_excel('Df.csv', index=False)
+        df.to_csv('Df.csv', index=False)
 
         return {"res":str(res)}
 
